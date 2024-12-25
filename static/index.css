@@ -32,11 +32,11 @@ body {
 
 #content h1 {
   font-size: 24px;
-  cursor:pointer;
   text-transform: uppercase;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
   margin-bottom: 20px;
+  padding: 20px;
 }
 
 #searchbar {
