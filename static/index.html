@@ -68,9 +68,11 @@ if (localStorage.getItem('ab') === 'true') {
 const switchElement = document.getElementById('gameSwitch');
 switchElement.addEventListener('click', () => {
     const isActive = switchElement.classList.toggle('active');
-    localStorage.setItem('ab', isActive ? 'true' : 'false'); // Set to 'false' if not active
     if (isActive) {
+       localStorage.setItem('ab', 'true'); // Set to 'false' if not active
         openGame();
+    } else {
+       localStorage.setItem('ab', 'false'); // Set to 'false' if not active
     }
 });</script>
 </body>
