@@ -28,8 +28,8 @@
             <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"> 
             <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input">
           </form>
-         <label for="gameSwitch" class="fa-solid">Toggle Game</label>
-<input type="checkbox" id="gameSwitch">
+<div id="gameSwitch" class="light-switch"></div>
+
       </div>
       <script src="uv/uv.bundle.js" defer=""></script>
       <script src="uv/uv.config.js" defer=""></script>
@@ -58,17 +58,18 @@ iframe.allow = "fullscreen"; // Explicit permissions policy
     window.location.replace('https://classroom.google.com/');
 }
     </script>
-      <script>if (localStorage.getItem('ab') === 'true') {
-    document.getElementById('gameSwitch').checked = true;
+      <script>// Check localStorage for the key 'ab' on page load
+if (localStorage.getItem('ab') === 'true') {
+    document.getElementById('gameSwitch').classList.add('active');
     openGame(); // Call the function if the value is 'true'
 }
 
 // Add an event listener to the switch to update localStorage
 const switchElement = document.getElementById('gameSwitch');
-switchElement.addEventListener('change', (event) => {
-    const isChecked = event.target.checked;
-    localStorage.setItem('ab', isChecked.toString());
-    if (isChecked) {
+switchElement.addEventListener('click', () => {
+    const isActive = switchElement.classList.toggle('active');
+    localStorage.setItem('ab', isActive.toString());
+    if (isActive) {
         openGame();
     }
 });</script>
