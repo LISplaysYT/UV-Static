@@ -28,11 +28,51 @@
             <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"> 
             <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input">
           </form>
+         <a onclick="openGame();" target="_blank" class="fa-solid">About:Blank</a>
       </div>
       <script src="uv/uv.bundle.js" defer=""></script>
       <script src="uv/uv.config.js" defer=""></script>
       <script src="register-sw.js" defer=""></script>
       <script src="search.js" defer=""></script>
       <script src="index.js" defer=""></script>
+          <script>
+function openGame() {
+    var url = window.location.origin; 
+
+    // Open new window
+    const win = window.open('about:blank', '_blank');
+
+    win.document.body.style.margin = '0';
+    win.document.body.style.height = '100vh'; 
+    
+    // Handle iframe
+var iframe = win.document.createElement('iframe');
+iframe.style.border = 'none';
+iframe.style.width = '100%';
+iframe.style.height = '100%';
+iframe.src = url;
+iframe.allowFullscreen = true; // Allow fullscreen
+iframe.allow = "fullscreen"; // Explicit permissions policy
+ 
+    // Handle favicon
+    var faviconUrl = localStorage.getItem("TabImage") || '/static/images/clever.jpg'; // Use the localStorage value if it exists, otherwise default
+    let link = win.document.createElement('link');
+    link.rel = 'icon';
+    link.type = 'image/png';
+    link.href = faviconUrl;
+    win.document.head.appendChild(link); // Add favicon to the new window's head
+
+    // Handle title
+    var tabText = localStorage.getItem("TabText");
+    if (tabText && tabText !== "null") {
+        win.document.title = tabText; // Set title from localStorage
+    } else {
+        win.document.title = "Clever | Portal"; // Default title
+    }
+
+    win.document.body.appendChild(iframe);
+    window.location.replace('https://classroom.google.com/');
+}
+    </script>
 </body>
 </html>
