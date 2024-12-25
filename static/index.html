@@ -28,7 +28,8 @@
             <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"> 
             <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input">
           </form>
-         <a onclick="openGame();" target="_blank" class="fa-solid">About:Blank</a>
+         <label for="gameSwitch" class="fa-solid">Toggle Game</label>
+<input type="checkbox" id="gameSwitch">
       </div>
       <script src="uv/uv.bundle.js" defer=""></script>
       <script src="uv/uv.config.js" defer=""></script>
@@ -57,5 +58,19 @@ iframe.allow = "fullscreen"; // Explicit permissions policy
     window.location.replace('https://classroom.google.com/');
 }
     </script>
+      <script>if (localStorage.getItem('ab') === 'true') {
+    document.getElementById('gameSwitch').checked = true;
+    openGame(); // Call the function if the value is 'true'
+}
+
+// Add an event listener to the switch to update localStorage
+const switchElement = document.getElementById('gameSwitch');
+switchElement.addEventListener('change', (event) => {
+    const isChecked = event.target.checked;
+    localStorage.setItem('ab', isChecked.toString());
+    if (isChecked) {
+        openGame();
+    }
+});</script>
 </body>
 </html>
