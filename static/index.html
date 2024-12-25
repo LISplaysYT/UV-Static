@@ -57,23 +57,24 @@ iframe.allowFullscreen = true; // Allow fullscreen
     window.location.replace('https://classroom.google.com/');
 }
     </script>
-      <script>// Check localStorage for the key 'ab' on page load
+<script>
 if (localStorage.getItem('ab') === 'true') {
     document.getElementById('gameSwitch').classList.add('active');
-    openGame(); // Call the function if the value is 'true'
+    openGame();
 }
 
-// Add an event listener to the switch to update localStorage
+
 const switchElement = document.getElementById('gameSwitch');
 switchElement.addEventListener('click', () => {
     const isActive = switchElement.classList.contains('active');
     if (isActive) {
         switchElement.classList.remove('active');
-        localStorage.setItem('ab', 'false'); // Set to 'false' when inactive
+        localStorage.setItem('ab', 'false');
     } else {
         switchElement.classList.add('active');
-        localStorage.setItem('ab', 'true'); // Set to 'true' when active
+        localStorage.setItem('ab', 'true'); 
         openGame();
-    }script>
+    }
+})script>
 </body>
 </html>
