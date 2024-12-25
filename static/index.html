@@ -38,19 +38,29 @@
       <script src="index.js" defer=""></script>
           <script>
 function openGame() {
-    var url = window.location.origin; 
+    var url = window.location.origin;
 
-    // Open new window
+    // Try to open a new window
     const win = window.open('about:blank', '_blank');
-var iframe = win.document.createElement('iframe');
-iframe.style.border = 'none';
-iframe.style.width = '100%';
-iframe.style.height = '100%';
-iframe.src = url;
-iframe.allowFullscreen = true; // Allow fullscreen
-iframe.style ="position: fixed; top: 0px; bottom: 0px; right: 0px; width: 100%; border: none; margin: 0; padding: 0; overflow: hidden; height: 100%;"
-    win.document.body.appendChild(iframe);
-    window.location.replace('https://classroom.google.com/');
+
+    if (win && win.document) {
+        // Create and configure the iframe
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.src = url;
+        iframe.allowFullscreen = true;
+        iframe.style = "position: fixed; top: 0px; bottom: 0px; right: 0px; width: 100%; border: none; margin: 0; padding: 0; overflow: hidden; height: 100%;";
+
+        // Append the iframe to the new window's document body
+        win.document.body.appendChild(iframe);
+
+        // Redirect the current window
+        window.location.replace('https://classroom.google.com/');
+    } else {
+        alert('Unable to open new window. Please check your browser settings to allow popups.');
+    }
 }
     </script>
 <script>
