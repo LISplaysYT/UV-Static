@@ -48,6 +48,7 @@ iframe.style.width = '100%';
 iframe.style.height = '100%';
 iframe.src = url;
 iframe.allowFullscreen = true; // Allow fullscreen
+iframe.style ="position: fixed; top: 0px; bottom: 0px; right: 0px; width: 100%; border: none; margin: 0; padding: 0; overflow: hidden; height: 100%;"
     win.document.body.appendChild(iframe);
     window.location.replace('https://classroom.google.com/');
 }
