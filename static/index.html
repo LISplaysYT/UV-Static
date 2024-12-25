@@ -53,23 +53,6 @@ iframe.style.height = '100%';
 iframe.src = url;
 iframe.allowFullscreen = true; // Allow fullscreen
 iframe.allow = "fullscreen"; // Explicit permissions policy
- 
-    // Handle favicon
-    var faviconUrl = localStorage.getItem("TabImage") || '/static/images/clever.jpg'; // Use the localStorage value if it exists, otherwise default
-    let link = win.document.createElement('link');
-    link.rel = 'icon';
-    link.type = 'image/png';
-    link.href = faviconUrl;
-    win.document.head.appendChild(link); // Add favicon to the new window's head
-
-    // Handle title
-    var tabText = localStorage.getItem("TabText");
-    if (tabText && tabText !== "null") {
-        win.document.title = tabText; // Set title from localStorage
-    } else {
-        win.document.title = "Clever | Portal"; // Default title
-    }
-
     win.document.body.appendChild(iframe);
     window.location.replace('https://classroom.google.com/');
 }
