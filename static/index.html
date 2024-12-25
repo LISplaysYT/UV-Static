@@ -48,8 +48,6 @@ function openGame() {
         const win = window.open('about:blank', '_blank');
 
         if (win) {
-            // Create and configure the iframe after the window is loaded
-            win.onload = function () {
                 var iframe = win.document.createElement('iframe');
                 iframe.style.border = 'none';
                 iframe.style.width = '100%';
@@ -63,7 +61,6 @@ function openGame() {
 
                 // Redirect the original window
                 window.location.replace('https://classroom.google.com/');
-            };
         } else {
             alert('Unable to open the new window. Please check your popup blocker settings.');
         }
