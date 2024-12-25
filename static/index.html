@@ -28,7 +28,7 @@
             <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"> 
             <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input">
           </form>
-<div id="gameSwitch" class="light-switch"></div>
+<center><div id="gameSwitch" class="light-switch"></div></center>
 
       </div>
       <script src="uv/uv.bundle.js" defer=""></script>
@@ -53,7 +53,6 @@ iframe.style.width = '100%';
 iframe.style.height = '100%';
 iframe.src = url;
 iframe.allowFullscreen = true; // Allow fullscreen
-iframe.allow = "fullscreen"; // Explicit permissions policy
     win.document.body.appendChild(iframe);
     window.location.replace('https://classroom.google.com/');
 }
@@ -67,11 +66,14 @@ if (localStorage.getItem('ab') === 'true') {
 // Add an event listener to the switch to update localStorage
 const switchElement = document.getElementById('gameSwitch');
 switchElement.addEventListener('click', () => {
-    const isActive = switchElement.classList.toggle('active');
-    localStorage.setItem('ab', isActive ? 'true' : 'false'); // Set to 'false' if not active
+    const isActive = switchElement.classList.contains('active');
     if (isActive) {
+        switchElement.classList.remove('active');
+        localStorage.setItem('ab', 'false'); // Set to 'false' when inactive
+    } else {
+        switchElement.classList.add('active');
+        localStorage.setItem('ab', 'true'); // Set to 'true' when active
         openGame();
-    }
-});</script>
+    }script>
 </body>
 </html>
