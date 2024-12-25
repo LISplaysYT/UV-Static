@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/static/rexy/',
-    bare:'https://bare.benrogo.net',
+    bare:'https://loungef2x.koyeb.app/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/static/uv/uv.handler.js',
