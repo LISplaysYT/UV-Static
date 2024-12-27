@@ -34,7 +34,6 @@ function insertNavbar() {
     padding: 15px;
     background-color: white
 ;
-    color: white
     border: 2px solid red;
     border-radius: 5px;
     text-decoration: none;
@@ -128,7 +127,6 @@ function insertNavbar() {
       font-size: 16px;
       border: none;
       outline: none;
-      color: white;
       padding: 14px 16px;
       background-color: inherit;
       font-family: inherit;
@@ -151,7 +149,6 @@ function insertNavbar() {
 
     .dropdown-content a {
       float: none;
-      color: black;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
