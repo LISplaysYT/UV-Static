@@ -111,7 +111,7 @@ function insertNavbar() {
     }
 
     .navbar a {
-      float: right;
+      float: left;
       font-size: 16px;
       color: white;
       text-align: center;
@@ -120,7 +120,7 @@ function insertNavbar() {
     }
 
     .dropdown {
-      float: right;
+      float: left;
       z-index: 1;
       overflow: hidden;
     }
