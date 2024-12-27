@@ -111,7 +111,7 @@ function insertNavbar() {
     }
 
     .navbar a {
-      float: left;
+      float: right;
       font-size: 16px;
       color: white;
       text-align: center;
@@ -120,7 +120,7 @@ function insertNavbar() {
     }
 
     .dropdown {
-      float: left;
+      float: right;
       z-index: 1;
       overflow: hidden;
     }
@@ -170,7 +170,6 @@ function insertNavbar() {
   <div class="navbar">
     <a href="/static/index.html">Home</a>
     <a href="/static/g.html">Games</a>
-    <a href="/tabs.html">Tabs (WIP)</a>
   </div>
   `;
   const navbarDiv = document.createElement('div');
