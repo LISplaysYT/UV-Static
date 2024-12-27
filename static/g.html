@@ -1,0 +1,264 @@
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <link rel="stylesheet" href="index.css">
+      <link rel="icon" type="image/x-icon" href="/static/images/frp.jpg">
+      <script src="/static/navbar.js"></script>
+      <title>Rexy's Planet</title>
+      <style>
+         body {
+      background-image: url("/static/images/brp.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover; 
+         }
+</style>
+          <style>
+
+    .settings-card p{color:Black; float: center;   font-size: 35px;}a{color:var(--text-primary)}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            text-color: white;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+          
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Allow the items to wrap */
+            justify-content: center; /* Centering the cards */
+            padding: 20px; /* Add padding around the container */
+        }
+
+        .settings-card {
+            background-color: transperant;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+            width: 300px; /* Set a fixed width for the card */
+            transition: all .3s ease;
+            margin: 10px; /* Space between cards */
+        }
+
+        .settings-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .settings-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, .2);
+        }
+
+        .typing_desc {
+            font-size: 18px;
+        }
+
+        .btn {
+            border: none;
+            background-color: inherit;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #333;
+        }
+
+        .default {
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .settings-card {
+                width: 100%; /* Full width on small screens */
+                max-width: 300px; /* Limit max width */
+            }
+        }
+       .item {
+    opacity: 0;
+}
+.games-content {
+    overflow-y: auto !important;
+    max-height: 500px !important;
+    padding-right: 5px;
+}
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
+    width: 100%;
+    scrollbar-color: transparent transparent;
+}
+
+.game-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: white
+;
+    color: white
+    border: 2px solid red;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    text-align: center;
+}
+
+.game-container a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+@media (max-width: 600px) {
+    .game-container a {
+        width: 100%;
+    }
+}
+</style>
+</head>
+   <body>
+     <center>
+<div class="games-content">
+<div class="game-container">
+    <div class="">
+    <a href="/static/embed.html#https://slopeio.org/game/slope/">
+      <center><p>Slope</p></center>
+    </a>
+  </div>
+    
+    <div class="">
+  <a href="/static/embed.html#https://undertale-play.com/wp-content/uploads/gg/undergarf-bad-monday-simulator/">
+    <center><p>Bad Monday Simulator</p></center>
+    </a>
+  </div>
+
+    <div class="">
+      <a href="/static/embed.html#https://tunnelrushgame.io/game/tunnel-rush/">
+          <center><p>Tunnel Rush</p></center>
+    </a>
+  </div>
+  
+  <div class="">
+    <a href="/static/embed.html#https://geometrydash-lite.com/">
+        <center><p>Geometry Dash Lite</p></center>
+    </a>
+  </div>
+        <div class="">
+    <a href="/static/embed.html#https://fridaynight-funkin.github.io/f88/friday-night-funkin/">
+        <center><p>Friday Night Funkin</p></center>
+    </a>
+  </div>
+</div>
+</div>
+</center>
+          <script>
+function openGame() {
+    // Check if the page is not in an iframe
+    if (window.self === window.top) {
+        var url = window.location.origin;
+
+        // Open a new window with the desired URL
+        const win = window.open('about:blank', '_blank');
+
+        if (win) {
+                var iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.src = url;
+                iframe.allowFullscreen = true;
+                iframe.style = "position: fixed; top: 0px; bottom: 0px; right: 0px; width: 100%; border: none; margin: 0; padding: 0; overflow: hidden; height: 100%;";
+
+                // Append the iframe to the new window's document body
+                win.document.body.appendChild(iframe);
+
+                // Redirect the original window
+                window.location.replace('https://classroom.google.com/');
+        } else {
+            alert('Unable to open the new window. Please check your popup blocker settings.');
+        }
+    }
+}
+    </script>
+<script>
+if (localStorage.getItem('ab') === 'true') {
+    document.getElementById('gameSwitch').classList.add('active');
+    openGame();
+</script>
+</body>
+</html>
