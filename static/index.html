@@ -9,13 +9,26 @@
       <script src="/static/navbar.js"></script>
       <title>Rexy's Planet</title>
       <style>
-         body {
-      background-image: url("/static/images/brp.jpg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-      background-size: cover; 
-         }
+<style>
+   body {
+      margin: 0; /* Remove default body margin */
+      overflow: hidden; /* Prevent scrollbars */
+   }
+
+   #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw; /* Full width of the viewport */
+      height: 100vh; /* Full height of the viewport */
+      z-index: -1; /* Ensure particles stay in the background */
+   }
+
+   #content {
+      position: relative; /* Ensure content stays above the particles */
+      z-index: 1;
+   }
+</style>
 </style>
 </head>
    <body>
