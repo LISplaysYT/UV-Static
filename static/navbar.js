@@ -104,73 +104,73 @@ function insertNavbar() {
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    .navbar {
-      overflow: hidden;
-      background-color: #333;
-      z-index: 100;
-    }
+  
+/* Navbar Styling */
+.navbar {
+   overflow: hidden;
+   background-color: #333;
+   position: relative; /* Ensure it respects z-index */
+   z-index: 100; /* Ensure it's above particles */
+}
 
-    .navbar a {
-      float: left;
-      font-size: 16px;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      z-index: 100;
-    }
+.navbar a {
+   float: left;
+   font-size: 16px;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   z-index: 101; /* Optional, ensures it's clickable */
+}
 
-    .dropdown {
-      float: left;
-      z-index: 1;
-      overflow: hidden;
-      z-index: 100;
-    }
+.dropdown {
+   float: left;
+   position: relative; /* Ensure dropdown positions properly */
+   z-index: 100;
+   overflow: visible; /* Ensure dropdown content isn't clipped */
+}
 
-    .dropdown .dropbtn {
-      font-size: 16px;
-      border: none;
-      outline: none;
-      padding: 14px 16px;
-      background-color: inherit;
-      font-family: inherit;
-      z-index: 100;
-      margin: 0;
-    }
+.dropdown .dropbtn {
+   font-size: 16px;
+   border: none;
+   outline: none;
+   padding: 14px 16px;
+   background-color: inherit;
+   font-family: inherit;
+   z-index: 101; /* Optional */
+   margin: 0;
+}
 
-    .navbar a:hover,
-    .dropdown:hover .dropbtn {
-      background-color: red;
-      z-index: 100;
-    }
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+   background-color: red;
+}
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 101; /* Ensure dropdown content is above particles */
+}
 
-    .dropdown-content a {
-      float: none;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-      z-index: 100;
-    }
+.dropdown-content a {
+   float: none;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+}
 
-    .dropdown-content a:hover {
-      background-color: #ddd;
-      z-index: 100;
-    }
+.dropdown-content a:hover {
+   background-color: #ddd;
+}
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-      z-index: 100;
-    }
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+
   </style>
   <div class="navbar">
     <a href="/static/index.html">Home</a>
