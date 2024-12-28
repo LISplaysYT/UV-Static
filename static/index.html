@@ -9,26 +9,28 @@
       <script src="/static/navbar.js"></script>
       <title>Rexy's Planet</title>
       <style>
-<style>
+   /* Reset margins and ensure the body has no scrollbars */
    body {
-      margin: 0; /* Remove default body margin */
-      overflow: hidden; /* Prevent scrollbars */
+      margin: 0;
+      overflow: hidden;
    }
 
+   /* Style the particles container to cover the full screen */
    #particles-js {
-      position: absolute;
+      position: fixed; /* Fix it to the viewport */
       top: 0;
       left: 0;
-      width: 100vw; /* Full width of the viewport */
-      height: 100vh; /* Full height of the viewport */
-      z-index: -1; /* Ensure particles stay in the background */
+      width: 100vw;
+      height: 100vh;
+      z-index: -1; /* Ensure it's behind all content */
+      background-color: black;
    }
 
+   /* Content container styles */
    #content {
-      position: relative; /* Ensure content stays above the particles */
-      z-index: 1;
+      position: relative; /* Keeps it above the particles */
+      z-index: 1; /* Ensure it's higher than the particles */
    }
-</style>
 </style>
 </head>
    <body>
