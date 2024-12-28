@@ -1,4 +1,7 @@
-
+#header img {
+  width: 20%;
+  height: auto;
+}
 #searchbar {
   text-align: center;
   margin: 20px auto;
