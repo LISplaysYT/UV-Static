@@ -78,8 +78,10 @@
    background-color: black;
 }
 
-   /* Content container styles */
-   #content {
-      position: relative; /* Keeps it above the particles */
-      z-index: 1; /* Ensure it's higher than the particles */
-   }
+#content {
+  text-align: center;
+  padding: 20px;
+  margin-top: -4%;
+  position: relative; /* Keeps it above the particles */
+  z-index: 1; /* Ensure it's higher than the particles */
+}
