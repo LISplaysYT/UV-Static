@@ -117,12 +117,14 @@ function insertNavbar() {
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
+      z-index: 100;
     }
 
     .dropdown {
       float: left;
       z-index: 1;
       overflow: hidden;
+      z-index: 100;
     }
 
     .dropdown .dropbtn {
@@ -132,12 +134,14 @@ function insertNavbar() {
       padding: 14px 16px;
       background-color: inherit;
       font-family: inherit;
+      z-index: 100;
       margin: 0;
     }
 
     .navbar a:hover,
     .dropdown:hover .dropbtn {
       background-color: red;
+      z-index: 100;
     }
 
     .dropdown-content {
@@ -155,14 +159,17 @@ function insertNavbar() {
       text-decoration: none;
       display: block;
       text-align: left;
+      z-index: 100;
     }
 
     .dropdown-content a:hover {
       background-color: #ddd;
+      z-index: 100;
     }
 
     .dropdown:hover .dropdown-content {
       display: block;
+      z-index: 100;
     }
   </style>
   <div class="navbar">
