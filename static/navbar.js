@@ -2,6 +2,7 @@
 function insertNavbar() {
   // Define the HTML for the navbar
   const navbarHTML = `
+  <script src="/static/particles.js"></script>
   <style type="text/css">
         .item {
     opacity: 0;
