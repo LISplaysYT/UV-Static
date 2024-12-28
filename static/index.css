@@ -2,6 +2,10 @@
   width: 20%;
   height: auto;
 }
+#header {
+  padding: 20px;
+  text-align: center;
+}
 #searchbar {
   text-align: center;
   margin: 20px auto;
