@@ -107,6 +107,7 @@ function insertNavbar() {
     .navbar {
       overflow: hidden;
       background-color: #333;
+      z-index: 100;
     }
 
     .navbar a {
