@@ -1,11 +1,3 @@
-/* Custom CSS for black theme */
-body {
-        background-image: url("/static/images/brp.jpg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-      background-size: cover; 
-}
 
 #header {
   padding: 20px;
