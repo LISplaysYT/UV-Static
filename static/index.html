@@ -14,13 +14,13 @@ body {
    color: white;
 }
 
-#particles-js{ position:absolute; width: 100%; height: 100%; background-color: black; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+#particles-js{ z-index:-222; position:absolute; width: 100%; height: 100%; background-color: black; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
    /* Content container styles */
    #content {
       position: relative; /* Keeps it above the particles */
    }
-   img {
+   .img {
       z-index: 1;
    }
 </style>
@@ -33,15 +33,14 @@ body {
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
       <div id="header">
-         <img src="/static/images/frp.jpg" alt="Logo">
-      </div>
+         <img class="img" src="/static/images/frp.jpg" alt="Logo">
          <center><h1>Rexy's Planet</h1></center>
          <center><form id="uv-form">
             <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"> 
             <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input">
           </form></center>
 <center><h3>About:Blank<div id="gameSwitch" class="light-switch"></div></h3></center>
-
+      </div>
       <script src="uv/uv.bundle.js" defer=""></script>
       <script src="uv/uv.config.js" defer=""></script>
       <script src="register-sw.js" defer=""></script>
